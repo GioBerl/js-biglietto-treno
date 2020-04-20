@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(209, 203, 203);
+    color: #2631ce;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(
+        to right,
+        #009246 0,
+        #009246 33%,
+        #fff 33%,
+        #fff 66%,
+        #ce2b37 66%,
+        #ce2b37 100%
+    );
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 50px 0;
+    font-size: 30px;
+}
