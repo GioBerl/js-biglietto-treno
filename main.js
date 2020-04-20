@@ -19,19 +19,19 @@ if (eta > 0 && eta < 100) {
     if (eta < 18) {
         var scontoGiovani = prezzoBiglietto * 0.2;
         document.getElementById('biglietto').innerHTML = prezzoBiglietto + '€';
-        document.getElementById('sconto').innerHTML = '(20%) ' + scontoGiovani;
+        document.getElementById('sconto').innerHTML = '(20%) ' + scontoGiovani + '€';
         document.getElementById('totale').innerHTML = (prezzoBiglietto - scontoGiovani) + '€';
         console.log(`il prezzo del biglietto e' di ${prezzoBiglietto}€, scontato del 20% (${scontoGiovani}€), quindi dovrai pagare: ` + (prezzoBiglietto - scontoGiovani) + '€');
     } else if (eta >= 65) {
         var scontoAnziani = prezzoBiglietto * 0.4;
-        document.getElementById('biglietto').innerHTML = prezzoBiglietto;
-        document.getElementById('sconto').innerHTML = '(40%) ' + scontoAnziani;
-        document.getElementById('totale').innerHTML = prezzoBiglietto - scontoAnziani;
+        document.getElementById('biglietto').innerHTML = prezzoBiglietto + '€';
+        document.getElementById('sconto').innerHTML = '(40%) ' + scontoAnziani + '€';
+        document.getElementById('totale').innerHTML = (prezzoBiglietto - scontoAnziani) + '€';
         console.log(`il prezzo del biglietto e' di ${prezzoBiglietto}€, scontato del 40% (${scontoAnziani}€), quindi dovrai pagare: ` + (prezzoBiglietto - scontoAnziani) + '€');
     } else {
-        document.getElementById('biglietto').innerHTML = prezzoBiglietto;
+        document.getElementById('biglietto').innerHTML = prezzoBiglietto + '€';
         document.getElementById('sconto').innerHTML = '0';
-        document.getElementById('totale').innerHTML = prezzoBiglietto;
+        document.getElementById('totale').innerHTML = prezzoBiglietto + '€';
         console.log(`prezzo biglietto: ${prezzoBiglietto}€, nessuno sconto applicato`);
     }
 } else {
