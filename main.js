@@ -7,8 +7,16 @@
 
 // Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero. 
 
-var kmDaPercorrere = prompt('quanti KM vuoi percorrere?');
-var eta = prompt('Quanti anni hai?');
+var kmDaPercorrere = parseInt(prompt('quanti KM vuoi percorrere?'));
+var eta = parseInt(prompt('Quanti anni hai?'));
+
+
+// Verifica che i dati inseriti siano numeri
+if (isNaN(kmDaPercorrere) || isNaN(eta)) {
+    alert(`devi inserire un valore numerico`);
+    // ? per ricaricare la pagina va bene
+    location.reload();
+}
 
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
 var prezzoBiglietto = kmDaPercorrere * 0.21;
@@ -35,7 +43,8 @@ if (eta > 0 && eta < 100) {
         console.log(`prezzo biglietto: ${prezzoBiglietto}€, nessuno sconto applicato`);
     }
 } else {
-    alert("OPS! Qualcosa e' andato storto");
+    alert("Devi inserire un numero compreso fra 1 e 99");
+    location.reload();
 }
 
 
