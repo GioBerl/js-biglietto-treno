@@ -18,14 +18,14 @@ var prezzoBiglietto = kmDaPercorrere * 0.21;
 if (eta > 0 && eta < 100) {
     if (eta < 18) {
         var scontoGiovani = prezzoBiglietto * 0.2;
-        document.getElementById('biglietto').innerHTML = prezzoBiglietto;
-        document.getElementById('sconto').innerHTML = scontoGiovani;
-        document.getElementById('totale').innerHTML = prezzoBiglietto - scontoGiovani;
+        document.getElementById('biglietto').innerHTML = prezzoBiglietto + '€';
+        document.getElementById('sconto').innerHTML = '(20%) ' + scontoGiovani;
+        document.getElementById('totale').innerHTML = (prezzoBiglietto - scontoGiovani) + '€';
         console.log(`il prezzo del biglietto e' di ${prezzoBiglietto}€, scontato del 20% (${scontoGiovani}€), quindi dovrai pagare: ` + (prezzoBiglietto - scontoGiovani) + '€');
     } else if (eta >= 65) {
         var scontoAnziani = prezzoBiglietto * 0.4;
         document.getElementById('biglietto').innerHTML = prezzoBiglietto;
-        document.getElementById('sconto').innerHTML = scontoAnziani;
+        document.getElementById('sconto').innerHTML = '(40%) ' + scontoAnziani;
         document.getElementById('totale').innerHTML = prezzoBiglietto - scontoAnziani;
         console.log(`il prezzo del biglietto e' di ${prezzoBiglietto}€, scontato del 40% (${scontoAnziani}€), quindi dovrai pagare: ` + (prezzoBiglietto - scontoAnziani) + '€');
     } else {
